@@ -1,0 +1,65 @@
+{
+  "name": "unicron",
+  "version": "0.0.1",
+  "description": "Framework for DHTMLX based web applications",
+  "localURL": "http://127.0.0.1/Unicron/",
+  "main": "app.js",
+  "scripts": {
+    "lint": "gulp lint",
+    "codebase": "gulp copybower && webpack",
+    "watch": "webpack --watch",
+    "server": "webpack-dev-server",
+    "build-server": "gulp copybower && webpack && webpack-dev-server",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:web2solucoes/Unicron.git"
+  },
+  "keywords": [
+    "dhtmlx",
+    "framework",
+    "app"
+  ],
+  "author": "Eduardo Almeida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/web2solucoes/Unicron/issues"
+  },
+  "homepage": "https://github.com/web2solucoes/Unicron#readme",
+  "devDependencies": {
+    "axios": "^0.15.3",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.22.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2015-loose": "^8.0.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "bower": "^1.8.0",
+    "css-loader": "^0.27.3",
+    "eslint": "^3.18.0",
+    "event-stream": "^3.3.4",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-filter": "^5.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "js-data-repo-tools": "^1.0.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.2",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-livereload-plugin": "^0.10.0",
+    "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Unicron</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <!-- <link href="//cdn.dhtmlx.com/site/dhtmlx.css" rel="stylesheet"></link>
+    <script src="//cdn.dhtmlx.com/site/dhtmlx.js"></script> -->
+    <script src="bower_components/traceur/bin/traceur.js"></script>
+    <script src="bower_components/traceur/bin/BrowserSystem.js"></script>
+    <script src="bower_components/traceur/src/bootstrap.js"></script>
+    
+    <!--<script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/backbone/backbone-min.js"></script> -->
+
+    <!-- <script src="bower_components/localforage/dist/localforage.js"></script>
+    <script src="bower_components/js-data/dist/js-data-debug.js"></script>
+    <script src="bower_components/js-data-localforage/dist/js-data-localforage.js"></script>
+    <script src="bower_components/js-data-http/dist/js-data-http.js"></script> -->
+    <script src="www/codebase/shim/array.js"></script>
+    <link href="www/codebase/app.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <script type="module">
+      	import { MyApp } from './sources/app-dev.js';
+      	const app = new MyApp({
+		    enable_local_database: true,
+		    enable_remote_database: true,
+			famd: 'www/codebase/famd.json'
+		});
+		/**
+		 *  The following events need to be set before calling Unicron.start(): 
+		 *    onApplicationStart
+		 *    onApplicationReady
+		 *    onSessionStart
+		 *    onLocalDatabaseReady
+		 *    onRemoteDatabaseReady
+		 */
+		app.events.on('onApplicationStart', () => {
+		    console.warn('onApplicationStart fired')
+		});
+		app.events.on('onComponentStart', (e) => {
+		    //console.log(e);
+		    console.warn('onComponentStart fired')
+		});
+		app.events.on('onSessionStart', () => {
+		    console.warn('onSessionStart fired')
+		});
+		app.events.on('onLocalDatabaseReady', () => {
+		    console.warn('onLocalDatabaseReady fired')
+		});
+		app.events.on('onRemoteDatabaseReady', () => {
+		    console.warn('onRemoteDatabaseReady fired')
+		});
+		app.events.on('onApplicationReady', () => {
+		    console.warn('onApplicationReady fired')
+		});
+		app.start(() => {
+		    //console.log( app );
+		    // local database operation
+		    const documentsCollection = app.local_database.defineResource('document');
+		    documentsCollection.create({
+		        author: 'John'
+		    }).then(function(document) {
+		        console.log(documentsCollection.get(document.id));
+		    });
+		    documentsCollection.findAll({}).then(function(documents) {
+		        console.log(documents);
+		    });
+		    // remote database operation via REST
+		    //const rdocumentsCollection = app.remote_database.defineResource('document');
+		    //rdocumentsCollection.create({ author: 'John' }).then(function (document) {
+		    //  console.log( documentsCollection.get(document.id) );
+		    //});
+		    /*const component = new Cybertron.UnicronBasicComponent(app);
+		    component.messaging_client.publish({
+		        action: 'create', // create, update, delete, list,
+		        collection: 'pets',
+		        model: 'pet',
+		        data: {
+		            "name": "Jane",
+		            "status": true
+		        },
+		    });*/
+		    //console.log( component );
+		});
+
+
+    </script>
+    
+  </body>
+</html>
