@@ -3,7 +3,10 @@ Unicron
 
 Software development automation toolkit for SPAs and REST APIs.
 
-See [Unicron-FAMDS](https://github.com/web2solutions/Unicron-FAMD)
+See also:
+
+[Unicron](https://github.com/web2solutions/unicron)
+[Unicron-FAMDS](https://github.com/web2solutions/Unicron-FAMD)
 
 
 ### How to run standalone
