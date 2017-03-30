@@ -1,6 +1,8 @@
 Unicron
 ================
 
+[![npm version](https://badge.fury.io/js/unicron-sdk.svg)](https://badge.fury.io/js/unicron-sdk)
+
 Software development automation toolkit for SPAs and REST APIs.
 
 See also:
