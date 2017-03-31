@@ -9,4 +9,5 @@ export class MyApp extends decepticons.Unicron{
 	}
 }
 
-window.MyApp = MyApp;
+const _root = window || global;
+_root.MyApp = MyApp;

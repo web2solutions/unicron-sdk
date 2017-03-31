@@ -18,9 +18,10 @@
 
 
     <script>
+    	let app;
       	document.addEventListener("DOMContentLoaded", () => 
       	{
-	      	const app = new MyApp({
+	      	app = new MyApp({
 	      		//root: document.body,
 			    enable_local_database: true,
 			    enable_remote_database: true,
@@ -86,7 +87,7 @@
 
 
 
-			    /*const component = new Cybertron.UnicronBasicComponent(app);
+			    /*const component = new decepticons.components.UnicronBasicComponent(app);
 			    component.messaging_client.publish({
 			        action: 'create', // create, update, delete, list,
 			        collection: 'pets',
