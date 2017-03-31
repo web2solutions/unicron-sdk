@@ -1,8 +1,8 @@
 {
-  "name": "unicron",
+  "name": "unicron-sdk",
   "version": "0.0.1",
-  "description": "Framework for DHTMLX based web applications",
-  "localURL": "http://127.0.0.1/Unicron/",
+  "description": "Software Development Kit for next generation Single Page Applications",
+  "localURL": "http://127.0.0.1/unicron-sdk/",
   "main": "app.js",
   "scripts": {
     "lint": "gulp lint",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:web2solucoes/Unicron.git"
+    "url": "git+ssh://git@github.com:web2solucoes/unicron-sdk.git"
   },
   "keywords": [
     "dhtmlx",
@@ -25,9 +25,9 @@
   "author": "Eduardo Almeida",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/web2solucoes/Unicron/issues"
+    "url": "https://github.com/web2solucoes/unicron-sdk/issues"
   },
-  "homepage": "https://github.com/web2solucoes/Unicron#readme",
+  "homepage": "https://github.com/web2solucoes/unicron-sdk#readme",
   "devDependencies": {
     "axios": "^0.15.3",
     "babel-core": "^6.24.0",

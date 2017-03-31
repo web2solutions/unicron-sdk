@@ -1,8 +1,8 @@
 import "less/app.less";
 
-import { Cybertron } from "../node_modules/unicron/index.js";
+import { decepticons } from "../node_modules/decepticons/index.js";
 
-export class MyApp extends Cybertron.Unicron{
+export class MyApp extends decepticons.Unicron{
 	constructor(config){
 		super(config);
 		//console.log(config);
