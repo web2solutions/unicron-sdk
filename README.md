@@ -7,7 +7,7 @@ Software development automation toolkit for SPAs and REST APIs.
 
 See also:
 
-[Unicron](https://github.com/web2solutions/unicron)
+[decepticons](https://github.com/web2solutions/decepticons)
 [Unicron-FAMDS](https://github.com/web2solutions/Unicron-FAMD)
 
 
