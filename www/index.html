@@ -54,10 +54,52 @@
 			app.events.on('onApplicationReady', () => {
 			    console.warn('onApplicationReady fired')
 			});
-			app.start(() => {
+			app.start( () => {
+
+
+				console.log( '------- testing Datastore: ');
+        
+		        app.datastore.owner.PersistenceLayer.on("afterCreate", function(){
+		            alert();
+		        }) 
+		        
+		        app.datastore.owner.create({
+		            name: 'Bond'
+		        })
+		        .then( ( item ) => {
+			            
+			            console.log( app.datastore.owner.get( item.id ) )
+
+
+
+			          	app.datastore.pet.create({
+				            name: 'Rex',
+				            ownerId: item.id
+				        })
+				        .then( ( pet ) => {
+					            console.log( app.datastore.pet.get( pet.id ) )
+					        })
+					    .catch( ( reason ) => {
+					        	console.log( reason )
+					        } );
+
+
+
+
+			        })
+			    .catch( ( reason ) => {
+			        	console.log( reason )
+			        } );
+
+		        app.datastore.owner.findAll().then(function(items) {
+		            console.log(items);
+		        });
+
+
+
 			    //console.log( app );
 			    // local database operation
-			    const petsCollection = app.local_database.defineResource('pets');
+			    /*const petsCollection = app.local_database.defineResource('pets');
 			    petsCollection.create({
 			        name: 'James',
 			        status: true
@@ -66,7 +108,7 @@
 			    });
 			    petsCollection.findAll({}).then(function(pets) {
 			        console.log(pets);
-			    });
+			    });*/
 			    
 			    // remote database operation via REST
 			    /*const rdocumentsCollection = app.remote_database.defineResource('document');
