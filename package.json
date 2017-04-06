@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:web2solucoes/unicron-sdk.git"
+    "url": "git+ssh://git@github.com:web2solutions/unicron-sdk.git"
   },
   "keywords": [
     "dhtmlx",
@@ -25,9 +25,9 @@
   "author": "Eduardo Almeida",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/web2solucoes/unicron-sdk/issues"
+    "url": "https://github.com/web2solutions/unicron-sdk/issues"
   },
-  "homepage": "https://github.com/web2solucoes/unicron-sdk#readme",
+  "homepage": "https://github.com/web2solutions/unicron-sdk#readme",
   "devDependencies": {
     "axios": "^0.15.3",
     "babel-core": "^6.24.0",
